@@ -9,8 +9,8 @@ namespace OOP_Task
 {
     public class BankAccount
     {
-        private string AccountNumber;
-        private string AccountHolderName;
+        private string AccountNumber { get; set; }
+        private string AccountHolderName { get;  set; }
         public decimal Balance { get; private set; }
      public BankAccount(string accountNumber, string accountHolderName)
         {
