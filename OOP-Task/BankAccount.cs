@@ -11,7 +11,7 @@ namespace OOP_Task
     {
         private string AccountNumber;
         private string AccountHolderName;
-        private decimal Balance;
+        public decimal Balance { get; private set; }
      public BankAccount(string accountNumber, string accountHolderName)
         {
             AccountNumber = accountNumber;
@@ -50,6 +50,7 @@ namespace OOP_Task
 
             Console.WriteLine("Balance: "+ balance);
         }
+
     }
     
 
