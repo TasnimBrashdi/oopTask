@@ -42,6 +42,14 @@ namespace OOP_Task
             }
         
         }
+        public void GetAccountInfo(string accountNumber,string accountHolderName,decimal balance) {
+            Console.WriteLine("- - - - ACCOUNT INFORMATION - - - -");
+            Console.WriteLine("Account Number: "+accountNumber);
+
+            Console.WriteLine("Account Holder Name: " + accountHolderName);
+
+            Console.WriteLine("Balance: "+ balance);
+        }
     }
     
 
