@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,24 @@ namespace OOP_Task
             AccountHolderName = accountHolderName;
             Balance = deposit;
 
+        }
+        public void deposit(decimal amount) {  
+
+            Balance += amount;
+            Console.WriteLine("Deposited"); 
+
+        }
+        public void Withdraw(decimal amount) {
+            if (Balance >= amount)
+            {
+                Balance -= amount;
+
+
+            }
+            else {
+                Console.WriteLine("insufficient Balance to complete the transaction");
+            }
+        
         }
     }
     
