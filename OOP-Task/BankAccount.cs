@@ -24,17 +24,26 @@ namespace OOP_Task
             Balance = deposit;
 
         }
-        public void deposit(decimal amount) {  
+        public void deposit(decimal amount) {
 
-            Balance += amount;
-            Console.WriteLine("Deposited"); 
+            if (amount > 0)
+            {
+                Balance += amount;
+                Console.WriteLine("Deposited, Your balance: " + Balance);
+            }
+            else
+            {
+                Console.WriteLine("ERROR: deposit amount must be positive!");
+            }
+           
 
         }
         public void Withdraw(decimal amount) {
-            if (Balance >= amount)
+            if (amount > 0 && amount <= Balance)
             {
                 Balance -= amount;
 
+                Console.WriteLine($"Successfully withdrew {amount} OMR. YOur balance  is {Balance} OMR");
 
             }
             else {
@@ -42,13 +51,17 @@ namespace OOP_Task
             }
         
         }
-        public void GetAccountInfo(string accountNumber,string accountHolderName,decimal balance) {
-            Console.WriteLine("- - - - ACCOUNT INFORMATION - - - -");
-            Console.WriteLine("Account Number: "+accountNumber);
+        public void GetAccountInfo() {
+            Console.WriteLine("\n- - - - ACCOUNT INFORMATION - - - -");
+            Console.WriteLine("\nAccount Number: "+ AccountNumber);
 
-            Console.WriteLine("Account Holder Name: " + accountHolderName);
+            Console.WriteLine("\nAccount Holder Name: " + AccountHolderName);
 
-            Console.WriteLine("Balance: "+ balance);
+            Console.WriteLine("\nBalance: "+ Balance);
+        }
+        public string GetAccountNumber()
+        {
+            return $"{AccountNumber}";
         }
 
     }
