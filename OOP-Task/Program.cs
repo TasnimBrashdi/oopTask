@@ -15,19 +15,40 @@
 
             switch (c) { 
                     case 1:
-
+                    Bank adding =new Bank();
+                    adding.AddAccount();
                     break;
                     case 2:
-
+                    Bank d = new Bank();
+                    d.DisplayAllAccounts();
                     break;
                     case 3:
-
+                    Console.WriteLine("Enter number account");
+                    string accountNumber = Console.ReadLine();
+                    Bank g = new Bank();
+                    g.GetAccountByNumber(accountNumber);
                     break;
                     case 4:
+                    Console.WriteLine("Enter number account");
+                    string accountN = Console.ReadLine();
+                    Console.WriteLine("Enter NAME account");
+                    string name = Console.ReadLine();
+                    Console.WriteLine("Enter number of money");
+                    decimal m =decimal.Parse( Console.ReadLine());
 
+                    BankAccount dep = new BankAccount(name,accountN);    
+                    dep.deposit(m);
                     break;
                     case 5:
+                    Console.WriteLine("Enter number account");
+                    string accountNw = Console.ReadLine();
+                    Console.WriteLine("Enter NAME account");
+                    string namew = Console.ReadLine();
+                    Console.WriteLine("Enter number of money");
+                    decimal num = decimal.Parse(Console.ReadLine());
 
+                    BankAccount w = new BankAccount(namew, accountNw);
+                    w.Withdraw(num);
                     break;
                     default:
 
